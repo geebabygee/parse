@@ -33,3 +33,41 @@ CSV.open(filepath, 'wb', csv_options) do |csv|
     csv << [beer[0], beer[1], beer[2]] # This is ruby - from array
   end
 end
+
+
+
+
+
+
+
+
+
+
+
+
+#with a hash
+
+# beers = []
+
+# CSV.foreach(filepath, csv_options) do |row|
+#   beer = {
+#     name: row["Name"],
+#     appearance: row["Appearance"],
+#     origin: row["Origin"]
+#   }
+#   beers << beer
+# end
+
+# beer = {
+#   name: name,
+#   origin: origin,
+#   appearance: appearance
+# }
+# beers << beer
+
+# CSV.open(filepath, 'wb', csv_options) do |csv|
+#   csv << ["Name", "Appearance", "Origin"]
+#   beers.each do |beer|
+#     csv << [beer[:name], beer[:appearance], beer[:origin]]
+#   end
+# end

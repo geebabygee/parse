@@ -2,8 +2,8 @@ require 'json'
 
 filepath    = 'beers.json'
 
+# Parsing the Json, reading from it
 serialized_beers = File.read(filepath)
-
 beers = JSON.parse(serialized_beers) #hash
 
 puts "What's the name of the beer?"
@@ -23,7 +23,7 @@ beer = {
 
 beers["beers"] << beer
 
-# JSON.generate serializes the hash
+# Saving to JSON
 File.open(filepath, 'wb') do |file|
   file.write(JSON.generate(beers))
 end
