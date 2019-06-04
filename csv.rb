@@ -9,6 +9,11 @@ csv_options = { col_sep: ',', quote_char: '"', headers: :first_row }
 
 CSV.foreach(filepath, csv_options) do |row|
   beer = [row['Name'], row['Appearance'], row["Origin"]]
+  #   beer = {
+  #     name: row["Name"],
+  #     appearance: row["Appearance"],
+  #     origin: row["Origin"]
+  #   }
   beers << beer
   puts "#{row['Name']}, a #{row['Appearance']} beer from #{row['Origin']}"
 end
@@ -24,6 +29,11 @@ puts "What's the origin of the beer?"
 origin = gets.chomp
 
 beer = [name,appearance,origin]
+# beer = {
+#   name: name,
+#   origin: origin,
+#   appearance: appearance
+# }
 beers << beer
 
 # CSV Storing - from ruby to csv
@@ -31,43 +41,6 @@ CSV.open(filepath, 'wb', csv_options) do |csv|
   csv << ['Name', 'Appearance', 'Origin']
   beers.each do |beer|
     csv << [beer[0], beer[1], beer[2]] # This is ruby - from array
+    #     csv << [beer[:name], beer[:appearance], beer[:origin]]
   end
 end
-
-
-
-
-
-
-
-
-
-
-
-
-#with a hash
-
-# beers = []
-
-# CSV.foreach(filepath, csv_options) do |row|
-#   beer = {
-#     name: row["Name"],
-#     appearance: row["Appearance"],
-#     origin: row["Origin"]
-#   }
-#   beers << beer
-# end
-
-# beer = {
-#   name: name,
-#   origin: origin,
-#   appearance: appearance
-# }
-# beers << beer
-
-# CSV.open(filepath, 'wb', csv_options) do |csv|
-#   csv << ["Name", "Appearance", "Origin"]
-#   beers.each do |beer|
-#     csv << [beer[:name], beer[:appearance], beer[:origin]]
-#   end
-# end

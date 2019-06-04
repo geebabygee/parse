@@ -1,6 +1,3 @@
-{"beers":[{"name":"Edelweiss","appearance":"White","origin":"Austria"},
-  {"name":"Cuvée des Trolls","appearance":"Blond","origin":"Belgium"},
-  {"name":"Choulette Ambrée","appearance":"Amber","origin":"France"},
-  {"name":"Gulden Draak","appearance":"Dark","origin":"Belgium"},
-  {"name":"Sagres","origin":"Portugal","appearance":"Blond"},
-  {"name":"dada","origin":"dada","appearance":"dsda"}]}
+{"title":"Great beers",
+ "beers":
+ [{"name":"Edelweiss","appearance":"White","origin":"Austria"},{"name":"Cuvée des Trolls","appearance":"Blond","origin":"Belgium"},{"name":"Choulette Ambrée","appearance":"Amber","origin":"France"},{"name":"Gulden Draak","appearance":"Dark","origin":"Belgium"},{"name":"Sagres","origin":"Portugal","appearance":"Blond"},{"name":"dada","origin":"dasda","appearance":"sasa"},{"name":"SASAS","origin":"SASAS","appearance":"SASASA"}]}
